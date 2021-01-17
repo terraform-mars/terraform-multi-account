@@ -28,7 +28,7 @@ resource "aws_organizations_organization" "this" {
   feature_set = "ALL"
 }
 
-resource "aws_organizations_account" "accounts" {
+resource "aws_organizations_account" "this" {
   for_each = local.vars["aws_accounts"]
 
   name  = each.key

@@ -13,7 +13,7 @@ locals {
 }
 
 provider "aws" {
-  region = local.vars.region
+  region = local.vars.aws_region
 }
 
 resource "aws_s3_bucket" "this" {

@@ -2,21 +2,18 @@
 # Global variables
 #
 
-accounts:
-  dev:
-    alias: "jneves-dev"
+aws_accounts:
+  jneves-dev:
     email: "jonasnvs+dev@gmail.com"
     id: "00000000000" # hardcoded temporarily
     role: "OrganizationAccountAccessRole"
 
-  # stage:
-  #   alias: "jneves-stage"
+  # jneves-stage:
   #   email: "jonasnvs+stage@gmail.com"
   #   role: "OrganizationAccountAccessRole"
   
-  # prod:
-  #   alias: "jneves-prod"
+  # jneves-prod:
   #   email: "jonasnvs+prod@gmail.com"
   #   role: "OrganizationAccountAccessRole"
 
-region: "us-east-1"
+aws_region: "us-east-1"
