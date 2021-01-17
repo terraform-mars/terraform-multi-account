@@ -3,6 +3,7 @@ terraform {
 }
 
 locals {
+  # Must be updated if you move this directory to another dir level
   relpath_to_root = "../../.."
   
   vars = yamldecode(join("\n", [
