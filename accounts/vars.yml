@@ -1,0 +1,21 @@
+#
+# Global variables
+#
+
+accounts:
+  dev:
+    alias: "jneves-dev"
+    email: "jonasnvs+dev@gmail.com"
+    role: "OrganizationAccountAccessRole"
+
+  # stage:
+  #   alias: "jneves-stage"
+  #   email: "jonasnvs+stage@gmail.com"
+  #   role: "OrganizationAccountAccessRole"
+  
+  # prod:
+  #   alias: "jneves-prod"
+  #   email: "jonasnvs+prod@gmail.com"
+  #   role: "OrganizationAccountAccessRole"
+
+region: "us-east-1"
