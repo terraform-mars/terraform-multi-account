@@ -19,6 +19,6 @@ locals {
 module "myapp" {
   source = "../../../modules/myapp"
 
-  env  = "dev"
+  env  = local.vars.env
   name = "myapp"
 }

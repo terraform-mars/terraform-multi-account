@@ -5,10 +5,10 @@
 An example of how to manage a terraform project with multiple AWS accounts.
 
 ### AWS Organizations
-* Ops is the Master account
-  * Maintains the S3 bucket for terraform state files
-* Dev/Stage/Prod are child accounts
-  * Allow Ops account to access them via the IAM role _OrganizationAccountAccessRole_
+* mgt is the management account
+  * Maintains the S3 bucket for terraform state files and dynamodb table for terraform locks
+* dev/stage/prod are child accounts
+  * Allow mgt account to access them via the IAM role _OrganizationAccountAccessRole_
 
 ### Shared variables
 
