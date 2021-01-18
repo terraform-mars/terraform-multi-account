@@ -19,25 +19,4 @@ provider "aws" {
   secret_key = data.external.aws_creds.result["SecretAccessKey"]
   token      = data.external.aws_creds.result["SessionToken"]
   region     = local.vars.aws_region
-  alias      = "mgt"
-}
-
-data "aws_caller_identity" "mgt" {
-  provider = aws.mgt
-}
-
-output mgt {
-  value = data.aws_caller_identity.mgt
-}
-
-provider "aws" {
-  access_key = data.external.aws_creds.result["AccessKeyId"]
-  secret_key = data.external.aws_creds.result["SecretAccessKey"]
-  token      = data.external.aws_creds.result["SessionToken"]
-  region     = local.vars.aws_region
-
-  assume_role {
-    role_arn     = "arn:aws:iam::${local.vars.aws_accounts["jneves-dev"].id}:role/${local.vars.aws_accounts["jneves-dev"].role}"
-    session_name = split(":", data.aws_caller_identity.mgt.user_id)[1]
-  }
 }

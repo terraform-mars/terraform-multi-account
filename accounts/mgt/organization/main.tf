@@ -16,10 +16,6 @@ locals {
   ]))
 }
 
-provider "aws" {
-  region = local.vars.aws_region
-}
-
 resource "aws_organizations_organization" "this" {
   aws_service_access_principals = [
     "sso.amazonaws.com",
