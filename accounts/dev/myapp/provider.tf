@@ -26,10 +26,6 @@ data "aws_caller_identity" "mgt" {
   provider = aws.mgt
 }
 
-output mgt {
-  value = data.aws_caller_identity.mgt
-}
-
 provider "aws" {
   access_key = data.external.aws_creds.result["AccessKeyId"]
   secret_key = data.external.aws_creds.result["SecretAccessKey"]
