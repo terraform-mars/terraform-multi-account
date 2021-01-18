@@ -1,7 +1,7 @@
 #
 # The credentials type that AWS SSO generates is currently not supported in terraform.
 # A lookup for credentials in the aws cli cache is being done as a workaround.
-# Make sure that you have "jq" installed.
+# Important: Make sure that you have "jq" installed.
 #
 
 # Create access keys in aws cli cache
